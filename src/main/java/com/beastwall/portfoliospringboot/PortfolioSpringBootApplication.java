@@ -27,7 +27,7 @@ import java.util.Locale;
 @RequestMapping("/")
 @Controller
 public class PortfolioSpringBootApplication {
-    private HashMap<String, Date> data;
+    private HashMap<String, Data> data;
 
 
     public static void main(String[] args) {
@@ -47,6 +47,12 @@ public class PortfolioSpringBootApplication {
                 Resource[] resources = resolver.getResources("classpath:static/data/*.json");
                 for (Resource resource : resources) {
                     Locale locale = new Locale(resource.getFilename().replace(".json", "").trim());
+                    String fileContent = new String(new ClassPathResource("static/data/" + locale.getLanguage() + ".json").getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+                    Data d = new ObjectMapper().readValue(fileContent, Data.class);
+
+                    System.out.println(d.getMetadata().getTitle());
+                    data.put(locale.getLanguage(), d);
+                    System.out.println(d.getMetadata().getTitle());
                 }
                /* String ths = new String(new ClassPathResource("values/config.json").getInputStream().readAllBytes(), StandardCharsets.UTF_8);
 
@@ -66,8 +72,10 @@ public class PortfolioSpringBootApplication {
 
     @ExceptionHandler(Exception.class)
     public void handleException(HttpServletRequest request,
-                                HttpServletResponse response) throws ServletException, IOException {
+                                HttpServletResponse response,
+                                Exception e) throws ServletException, IOException {
         request.getRequestDispatcher("/").forward(request, response);
+        e.printStackTrace();
     }
 
 }
