@@ -5,15 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.util.List;
-
 @AllArgsConstructor
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Data {
-    private Metadata metadata;
-    private Personal personal;
-    private List<PortfolioProject> portfolio;
-    private List<Blog> blog;
+public class PortfolioProject {
+    private String image;
+    private String title;
+    private String hint;
+    private String type;
 }
