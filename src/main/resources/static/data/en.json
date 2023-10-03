@@ -19,9 +19,112 @@
     "mapsLink": ""
   },
   "about": {
-    "description": ""
+    "description": "",
+    "activities": [
+      {
+        "image": "",
+        "title": "",
+        "description": ""
+      },
+      {
+        "image": "",
+        "title": "",
+        "description": ""
+      },
+      {
+        "image": "",
+        "title": "",
+        "description": ""
+      },
+      {
+        "image": "",
+        "title": "",
+        "description": ""
+      }
+    ],
+    "testimonials": [
+      {
+        "image": "",
+        "time": "",
+        "description": ""
+      },
+      {
+        "image": "",
+        "time": "",
+        "description": ""
+      }
+    ],
+    "clients": [
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      }
+    ]
   },
-  "resume": {},
-  "portfolio": {},
-  "blog": {}
+  "resume": {
+    "education": [
+      {
+        "degree": "",
+        "period": "",
+        "description": ""
+      }
+    ],
+    "experience": [
+      {
+        "degree": "",
+        "period": "",
+        "description": ""
+      },
+      {
+        "degree": "",
+        "period": "",
+        "description": ""
+      },
+      {
+        "degree": "",
+        "period": "",
+        "description": ""
+      },
+      {
+        "degree": "",
+        "period": "",
+        "description": ""
+      }
+    ],
+    "skills": {
+      "name": "",
+      "value": ""
+    }
+  },
+  "portfolio": [
+    {
+      "image": "",
+      "title": "",
+      "description": ""
+    }
+  ],
+  "blog": [
+    {
+      "image": "",
+      "title": "",
+      "description": "",
+      "hint": ""
+    }
+  ]
 }
