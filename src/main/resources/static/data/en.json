@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Abdelouadoud Rasmi",
+    "description": "Abdelouadoud Rasmi is a talented senior fullstack / backend Java developer, using Spring boot, from Algeria, i have worked on so many projects for big companies",
+    "og:img": "",
+    "favicon": ""
+  },
+  "personal": {
+    "fullname": "Abdelouadoud Rasmi",
+    "avatar": "/images/rasmi.jpeg",
+    "job": "Java developer",
+    "birthday": "April 06, 1998",
+    "location": "Paris, France",
+    "email": "abdelouadoudrasmi@gmail.com",
+    "facebook": "",
+    "twitter": "",
+    "instagram": "",
+    "github": "https://github.com/rasmi-aw",
+    "mapsLink": ""
+  },
+  "about": {
+    "description": ""
+  },
+  "resume": {},
+  "portfolio": {},
+  "blog": {}
+}
