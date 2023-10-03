@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
@@ -36,5 +37,10 @@ public class PortfolioSpringBootApplication {
         request.getRequestDispatcher("/").forward(request, response);
     }
 
+    @ExceptionHandler(Exception.class)
+    public void handleException(HttpServletRequest request,
+                                HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/").forward(request, response);
+    }
 
 }
