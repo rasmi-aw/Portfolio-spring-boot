@@ -49,10 +49,7 @@ public class PortfolioSpringBootApplication {
                     Locale locale = new Locale(resource.getFilename().replace(".json", "").trim());
                     String fileContent = new String(new ClassPathResource("static/data/" + locale.getLanguage() + ".json").getInputStream().readAllBytes(), StandardCharsets.UTF_8);
                     Data d = new ObjectMapper().readValue(fileContent, Data.class);
-
-                    System.out.println(d.getMetadata().getTitle());
                     data.put(locale.getLanguage(), d);
-                    System.out.println(d.getMetadata().getTitle());
                 }
                /* String ths = new String(new ClassPathResource("values/config.json").getInputStream().readAllBytes(), StandardCharsets.UTF_8);
 
