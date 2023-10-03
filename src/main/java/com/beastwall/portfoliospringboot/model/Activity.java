@@ -9,7 +9,8 @@ import lombok.experimental.Accessors;
 @Getter
 @Setter
 @Accessors(chain = true)
-public class Data {
-    Metadata metadata;
-    Personal personal;
+public class Activity {
+    private String time;
+    private String description;
+    private String image;
 }
