@@ -108,10 +108,28 @@
         "description": ""
       }
     ],
-    "skills": {
-      "name": "",
-      "value": ""
-    }
+    "skills": [
+      {
+        "name": "",
+        "value": ""
+      },
+      {
+        "name": "",
+        "percent": ""
+      },
+      {
+        "name": "",
+        "percent": ""
+      },
+      {
+        "name": "",
+        "percent": ""
+      },
+      {
+        "name": "",
+        "percent": ""
+      }
+    ]
   },
   "portfolio": [
     {
