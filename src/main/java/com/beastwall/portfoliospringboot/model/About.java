@@ -15,4 +15,5 @@ public class About {
     private String description;
     private List<Activity> activities;
     private List<Testimonial> testimonials;
+    private List<Client> clients;
 }
