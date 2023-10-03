@@ -1,9 +1,14 @@
 package com.beastwall.portfoliospringboot;
 
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.io.IOException;
 
 @SpringBootApplication
 
@@ -17,7 +22,8 @@ public class PortfolioSpringBootApplication {
 
 
     @RequestMapping("/")
-    public String root() {
+    public String root(HttpServletRequest request) {
+        String lang = request.getLocale().getLanguage();
         return "index";
     }
 
@@ -25,7 +31,10 @@ public class PortfolioSpringBootApplication {
      * no Error page will be shown
      */
     @RequestMapping("/{anyparam}")
-    public String anyParam() {
-        return "index";
+    public void anyParam(HttpServletRequest request,
+                         HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/").forward(request, response);
     }
+
+
 }
