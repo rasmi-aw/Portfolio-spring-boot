@@ -20,4 +20,12 @@ public class PortfolioSpringBootApplication {
     public String root() {
         return "index";
     }
+
+    /**
+     * no Error page will be shown
+     */
+    @RequestMapping("/{anyparam}")
+    public String anyParam() {
+        return "index";
+    }
 }
