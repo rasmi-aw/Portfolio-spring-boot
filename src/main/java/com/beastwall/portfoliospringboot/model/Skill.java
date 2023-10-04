@@ -13,5 +13,5 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Skill {
     private String name;
-    private String value;
+    private String percent;
 }

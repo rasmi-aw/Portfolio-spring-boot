@@ -18,6 +18,7 @@ public class Data {
     private Metadata metadata;
     private Personal personal;
     private About about;
+    private Resume resume;
     private List<PortfolioProject> portfolio;
     private List<Blog> blog;
 }
