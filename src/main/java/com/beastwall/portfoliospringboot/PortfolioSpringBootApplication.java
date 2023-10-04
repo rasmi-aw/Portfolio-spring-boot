@@ -12,6 +12,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -36,7 +37,8 @@ public class PortfolioSpringBootApplication {
 
 
     @RequestMapping("/")
-    public String root(HttpServletRequest request) throws IOException {
+    public String root(HttpServletRequest request,
+                       Model input) throws IOException {
         String lang = request.getLocale().getLanguage();
         // reading data json files for each language then cache them
         if (data == null)
@@ -55,6 +57,9 @@ public class PortfolioSpringBootApplication {
 
                 File dataDir = new File()*/
             }
+        if (!data.containsKey(lang))
+            lang = "en";
+        input.addAttribute("data", data.get(lang));
         return "index";
     }
 
