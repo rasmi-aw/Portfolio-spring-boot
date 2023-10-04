@@ -3,14 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" th:content="${data.metadata.description}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vCard - Personal Portfolio</title>
+    <title th:text="${data.metadata.title}">vCard - Personal Portfolio</title>
 
     <!--
       - favicon
     -->
-    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="fav icon" th:href="${data.metadata.favicon}" type="image/x-icon">
 
     <!--
       - custom css link
@@ -47,9 +48,9 @@
             </figure>
 
             <div class="info-content">
-                <h1 class="name" title="Richard hanrick">Abdelouadoud Rasmi</h1>
+                <h1 class="name" th:title="${data.personal.fullname}" th:text="${data.personal.fullname}">Abdelouadoud Rasmi</h1>
 
-                <p class="title">Web developer</p>
+                <p class="title" th:text="${data.personal.job}">Web developer</p>
             </div>
 
             <button class="info_more-btn" data-sidebar-btn>
@@ -75,7 +76,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Email</p>
 
-                        <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+                        <a th:href="${'mailto:'+data.personal.email}" th:text="${data.personal.email}" class="contact-link">abdelouadoudrasmi@gmail.com</a>
                     </div>
 
                 </li>
@@ -89,7 +90,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Phone</p>
 
-                        <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+                        <a th:href="${'tel:'+data.personal.phone}" class="contact-link" th:text="${data.personal.phone}">+1 (213) 352-2795</a>
                     </div>
 
                 </li>
@@ -103,7 +104,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Birthday</p>
 
-                        <time datetime="1982-06-23">June 23, 1982</time>
+                        <time th:datetime="${data.personal.birthday}" th:text="${data.personal.birthday}">June 23, 1982</time>
                     </div>
 
                 </li>

@@ -22,5 +22,6 @@ public class Personal {
     private String twitter;
     private String instagram;
     private String github;
+    private String phone;
     private String mapsLink;
 }
