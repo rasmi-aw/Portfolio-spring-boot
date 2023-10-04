@@ -1,5 +1,6 @@
 package com.beastwall.portfoliospringboot.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import java.util.List;
 public class Data {
     private Metadata metadata;
     private Personal personal;
+    private About about;
     private List<PortfolioProject> portfolio;
     private List<Blog> blog;
 }

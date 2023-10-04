@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
 @Setter
 @Accessors(chain = true)
 public class Activity {
-    private String time;
+    private String title;
     private String description;
     private String image;
 }
