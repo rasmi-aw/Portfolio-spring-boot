@@ -53,13 +53,12 @@ public class PortfolioSpringBootApplication {
                     Data d = new ObjectMapper().readValue(fileContent, Data.class);
                     data.put(locale.getLanguage(), d);
                 }
-               /* String ths = new String(new ClassPathResource("values/config.json").getInputStream().readAllBytes(), StandardCharsets.UTF_8);
-
-                File dataDir = new File()*/
             }
         if (!data.containsKey(lang))
             lang = "en";
         input.addAttribute("data", data.get(lang));
+        input.addAttribute("lang", lang);
+        input.addAttribute("dir", !lang.equals("ar") ? "ltr" : "rtl");
         return "index";
     }
 
