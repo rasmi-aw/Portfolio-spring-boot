@@ -48,7 +48,8 @@
             </figure>
 
             <div class="info-content">
-                <h1 class="name" th:title="${data.personal.fullname}" th:text="${data.personal.fullname}">Abdelouadoud Rasmi</h1>
+                <h1 class="name" th:title="${data.personal.fullname}" th:text="${data.personal.fullname}">Abdelouadoud
+                    Rasmi</h1>
 
                 <p class="title" th:text="${data.personal.job}">Web developer</p>
             </div>
@@ -76,7 +77,8 @@
                     <div class="contact-info">
                         <p class="contact-title">Email</p>
 
-                        <a th:href="${'mailto:'+data.personal.email}" th:text="${data.personal.email}" class="contact-link">abdelouadoudrasmi@gmail.com</a>
+                        <a th:href="${'mailto:'+data.personal.email}" th:text="${data.personal.email}"
+                           class="contact-link">abdelouadoudrasmi@gmail.com</a>
                     </div>
 
                 </li>
@@ -90,7 +92,8 @@
                     <div class="contact-info">
                         <p class="contact-title">Phone</p>
 
-                        <a th:href="${'tel:'+data.personal.phone}" class="contact-link" th:text="${data.personal.phone}">+1 (213) 352-2795</a>
+                        <a th:href="${'tel:'+data.personal.phone}" class="contact-link"
+                           th:text="${data.personal.phone}">+1 (213) 352-2795</a>
                     </div>
 
                 </li>
@@ -104,7 +107,9 @@
                     <div class="contact-info">
                         <p class="contact-title">Birthday</p>
 
-                        <time th:datetime="${data.personal.birthday}" th:text="${data.personal.birthday}">June 23, 1982</time>
+                        <time th:datetime="${data.personal.birthday}" th:text="${data.personal.birthday}">June 23,
+                            1982
+                        </time>
                     </div>
 
                 </li>
@@ -118,7 +123,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Location</p>
 
-                        <address>Sacramento, California, USA</address>
+                        <address th:text="${data.personal.location}">Sacramento, California, USA</address>
                     </div>
 
                 </li>
@@ -204,14 +209,12 @@
             </header>
 
             <section class="about-text">
-                <p>
+                <p th:text="${data.about.description}">
                     I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and
                     print media.
                     I enjoy
                     turning complex problems into simple, beautiful and intuitive designs.
-                </p>
-
-                <p>
+                    <br><br>
                     My job is to build your website so that it is functional and user-friendly but at the same time
                     attractive.
                     Moreover, I
@@ -236,8 +239,7 @@
                     <li class="service-item">
 
                         <div class="service-icon-box">
-                            <img src="images/icon-design.svg
-                " alt="design icon" width="40">
+                            <img src="images/icon-design.svg" alt="design icon" width="40">
                         </div>
 
                         <div class="service-content-box">
