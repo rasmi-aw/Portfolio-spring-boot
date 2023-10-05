@@ -116,12 +116,12 @@
     ],
     "skills": [
       {
-        "name": "",
-        "percent": ""
+        "name": "Java",
+        "percent": "100"
       },
       {
-        "name": "",
-        "percent": ""
+        "name": "Spring boot",
+        "percent": "95"
       },
       {
         "name": "",
