@@ -82,9 +82,14 @@
   "resume": {
     "education": [
       {
-        "degree": "",
-        "period": "",
-        "description": ""
+        "degree": "Master & Engineer of computer science",
+        "period": "2015 — 2020",
+        "description": "2 degrees of computer science, Master and Engineer, in information system and web development, from the Higher school of computer science in Algeria (ESI)"
+      },
+      {
+        "degree": "High school degree - Baccalaureate exam",
+        "period": "2012 — 2015",
+        "description": "High school degree, Baccalaureate exam with very good mark, one of the best students in my city"
       }
     ],
     "experience": [
