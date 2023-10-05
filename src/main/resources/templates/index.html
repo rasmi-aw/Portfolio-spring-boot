@@ -6,7 +6,7 @@
     <meta name="description" th:content="${data.metadata.description}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:text="${data.metadata.title}">vCard - Personal Portfolio</title>
+    <title th:utext="${data.metadata.title}">vCard - Personal Portfolio</title>
 
     <!--
       - favicon
@@ -48,10 +48,10 @@
             </figure>
 
             <div class="info-content">
-                <h1 class="name" th:title="${data.personal.fullname}" th:text="${data.personal.fullname}">Abdelouadoud
+                <h1 class="name" th:title="${data.personal.fullname}" th:utext="${data.personal.fullname}">Abdelouadoud
                     Rasmi</h1>
 
-                <p class="title" th:text="${data.personal.job}">Web developer</p>
+                <p class="title" th:utext="${data.personal.job}">Web developer</p>
             </div>
 
             <button class="info_more-btn" data-sidebar-btn>
@@ -77,7 +77,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Email</p>
 
-                        <a th:href="${'mailto:'+data.personal.email}" th:text="${data.personal.email}"
+                        <a th:href="${'mailto:'+data.personal.email}" th:utext="${data.personal.email}"
                            class="contact-link">abdelouadoudrasmi@gmail.com</a>
                     </div>
 
@@ -93,7 +93,7 @@
                         <p class="contact-title">Phone</p>
 
                         <a th:href="${'tel:'+data.personal.phone}" class="contact-link"
-                           th:text="${data.personal.phone}">+1 (213) 352-2795</a>
+                           th:utext="${data.personal.phone}">+1 (213) 352-2795</a>
                     </div>
 
                 </li>
@@ -107,7 +107,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Birthday</p>
 
-                        <time th:datetime="${data.personal.birthday}" th:text="${data.personal.birthday}">June 23,
+                        <time th:datetime="${data.personal.birthday}" th:utext="${data.personal.birthday}">June 23,
                             1982
                         </time>
                     </div>
@@ -123,7 +123,7 @@
                     <div class="contact-info">
                         <p class="contact-title">Location</p>
 
-                        <address th:text="${data.personal.location}">Sacramento, California, USA</address>
+                        <address th:utext="${data.personal.location}">Sacramento, California, USA</address>
                     </div>
 
                 </li>
@@ -209,7 +209,7 @@
             </header>
 
             <section class="about-text">
-                <p th:text="${data.metadata.description}">
+                <p th:utext="${data.metadata.description}">
                     I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and
                     print media.
                     I enjoy
@@ -243,9 +243,9 @@
                         </div>
 
                         <div class="service-content-box">
-                            <h4 class="h4 service-item-title" th:text="${act.title}">Web design</h4>
+                            <h4 class="h4 service-item-title" th:utext="${act.title}">Web design</h4>
 
-                            <p class="service-item-text" th:text="${act.description}">
+                            <p class="service-item-text" th:utext="${act.description}">
                                 The most modern and high-quality design made at a professional level.
                             </p>
                         </div>
@@ -274,11 +274,11 @@
                                 <img th:src="${tes.image}" th:alt="${tes.title}" width="60" data-testimonials-avatar>
                             </figure>
 
-                            <h4 class="h4 testimonials-item-title" data-testimonials-title th:text="${tes.title}">Daniel
+                            <h4 class="h4 testimonials-item-title" data-testimonials-title th:utext="${tes.title}">Daniel
                                 lewis</h4>
 
                             <div class="testimonials-text" data-testimonials-text>
-                                <p th:text="${tes.description}">
+                                <p th:utext="${tes.description}">
                                     Richard was hired to create a corporate identity. We were very pleased with the work
                                     done. She has a
                                     lot of experience
@@ -386,10 +386,10 @@
 
                 <ol class="timeline-list">
                     <li th:each="edu:${data.resume.education}" class="timeline-item">
-                        <h4 class="h4 timeline-item-title" th:text="${edu.degree}">University school of the arts</h4>
-                        <span th:text="${edu.period}">2007 — 2008</span>
+                        <h4 class="h4 timeline-item-title" th:utext="${edu.degree}">University school of the arts</h4>
+                        <span th:utext="${edu.period}">2007 — 2008</span>
 
-                        <p class="timeline-text" th:text="${edu.description}">
+                        <p class="timeline-text" th:utext="${edu.description}">
                             Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos
                             dolores et
                             quas molestias
@@ -414,11 +414,11 @@
 
                     <li th:each="exp:${data.resume.experience}" class="timeline-item">
 
-                        <h4 class="h4 timeline-item-title" th:text="${exp.name}">Creative director</h4>
+                        <h4 class="h4 timeline-item-title" th:utext="${exp.name}">Creative director</h4>
 
-                        <span th:text="${exp.period}">2015 — Present</span>
+                        <span th:utext="${exp.period}">2015 — Present</span>
 
-                        <p class="timeline-text" th:text="${exp.description}">
+                        <p class="timeline-text" th:utext="${exp.description}">
                             Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos
                             dolores et qvuas
                             molestias
@@ -440,8 +440,8 @@
                     <li th:each="skill:${data.resume.skills}" class="skills-item">
 
                         <div class="title-wrapper">
-                            <h5 class="h5" th:text="${skill.name}">Web design</h5>
-                            <data th:value="${skill.percent}" th:text="${skill.percent+'%'}">80%</data>
+                            <h5 class="h5" th:utext="${skill.name}">Web design</h5>
+                            <data th:value="${skill.percent}" th:utext="${skill.percent+'%'}">80%</data>
                         </div>
 
                         <div class="skill-progress-bg">
@@ -525,8 +525,8 @@
                                 </div>
                                 <img th:src="${pro.image}" th:alt="${pro.title}" loading="lazy">
                             </figure>
-                            <h3 class="project-title" th:text="${pro.title}">Finance</h3>
-                            <p class="project-category" th:text="${pro.hint}">Web development</p>
+                            <h3 class="project-title" th:utext="${pro.title}">Finance</h3>
+                            <p class="project-category" th:utext="${pro.hint}">Web development</p>
                         </a>
                     </li>
                 </ul>
@@ -562,12 +562,12 @@
 
                                     <span class="dot"></span>
 
-                                    <time th:datetime="${blog.hint}" th:text="${blog.hint}">Fab 23, 2022</time>
+                                    <time th:datetime="${blog.hint}" th:utext="${blog.hint}">Fab 23, 2022</time>
                                 </div>
 
-                                <h3 class="h3 blog-item-title" th:text="${blog.title}">Design conferences in 2022</h3>
+                                <h3 class="h3 blog-item-title" th:utext="${blog.title}">Design conferences in 2022</h3>
 
-                                <p class="blog-text" th:text="${blog.description}">
+                                <p class="blog-text" th:utext="${blog.description}">
                                     Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
                                 </p>
 
