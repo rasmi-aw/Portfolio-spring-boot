@@ -23,19 +23,19 @@
     "description": "",
     "activities": [
       {
-        "image": "",
-        "title": "",
-        "description": ""
+        "image": "images/icon-dev.svg",
+        "title": "Web development",
+        "description": "Java, Spring boot, Javascript & Angular..."
       },
       {
-        "image": "",
-        "title": "",
-        "description": ""
+        "image": "images/icon-quote.svg",
+        "title": "Devops",
+        "description": "Docker, Jenkins, Maven, Tomcat, Ci/Cd pipelines..."
       },
       {
-        "image": "",
-        "title": "",
-        "description": ""
+        "image": "images/icon-design.svg",
+        "title": "Conceptualization",
+        "description": "Architecture, UML, Microservices, different types of diagrams"
       },
       {
         "image": "",
