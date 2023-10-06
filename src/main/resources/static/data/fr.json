@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "title": "Abdelouadoud Rasmi",
+    "description": "Abdelouadoud Rasmi is a talented senior fullstack / backend Java developer, using Spring boot, from Algeria, i have worked on so many projects for big companies",
+    "og:img": "/images/rasmi.jpeg",
+    "favicon": "/images/rasmi.jpeg"
+  },
+  "personal": {
+    "fullname": "Abdelouadoud Rasmi",
+    "avatar": "/images/rasmi.jpeg",
+    "job": "Java developer",
+    "birthday": "April 06, 1998",
+    "location": "Paris, France",
+    "phone": "+ (33) 7 510 273 79",
+    "email": "abdelouadoudrasmi@gmail.com",
+    "facebook": "",
+    "twitter": "",
+    "instagram": "",
+    "github": "https://github.com/rasmi-aw",
+    "mapsLink": ""
+  },
+  "about": {
+    "description": "",
+    "activities": [
+      {
+        "image": "images/icon-dev.svg",
+        "title": "Web development",
+        "description": "Java, Spring boot, Javascript & Angular..."
+      },
+      {
+        "image": "images/icon-quote.svg",
+        "title": "Devops",
+        "description": "Docker, Jenkins, Maven, Tomcat, Ci/Cd pipelines..."
+      },
+      {
+        "image": "images/icon-design.svg",
+        "title": "Conceptualization",
+        "description": "Architecture, UML, Microservices, different types of diagrams"
+      },
+      {
+        "image": "images/icon-app.svg",
+        "title": "Mobile development",
+        "description": "I have experience with Android development"
+      }
+    ],
+    "testimonials": [
+      {
+        "image": "",
+        "time": "",
+        "title": "",
+        "description": ""
+      },
+      {
+        "image": "",
+        "time": "",
+        "description": ""
+      }
+    ],
+    "clients": [
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      },
+      {
+        "image": "",
+        "link": ""
+      }
+    ]
+  },
+  "resume": {
+    "education": [
+      {
+        "degree": "Master & Engineer of computer science",
+        "period": "2015 — 2020",
+        "description": "2 degrees of computer science, Master and Engineer, in information system and web development, from the Higher school of computer science in Algeria (ESI)"
+      },
+      {
+        "degree": "High school degree - Baccalaureate exam",
+        "period": "2012 — 2015",
+        "description": "High school degree, Baccalaureate exam with very good mark, one of the best students in my city"
+      }
+    ],
+    "experience": [
+      {
+        "name": "Fullstack Java developer - Alten",
+        "period": "2023 (6 months)",
+        "description": "Permanent position as a Java developer, worked on 3 different projects <br>-tes<br>-odfd"
+      },
+      {
+        "name": "",
+        "period": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "period": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "period": "",
+        "description": ""
+      }
+    ],
+    "skills": [
+      {
+        "name": "Java",
+        "percent": "100"
+      },
+      {
+        "name": "Spring boot",
+        "percent": "95"
+      },
+      {
+        "name": "",
+        "percent": ""
+      },
+      {
+        "name": "",
+        "percent": ""
+      },
+      {
+        "name": "",
+        "percent": ""
+      }
+    ]
+  },
+  "portfolio": [
+    {
+      "image": "",
+      "title": "",
+      "hint": "",
+      "type": ""
+    }
+  ],
+  "blog": [
+    {
+      "image": "",
+      "title": "",
+      "description": "",
+      "hint": ""
+    }
+  ]
+}
