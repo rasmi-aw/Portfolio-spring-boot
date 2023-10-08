@@ -121,11 +121,11 @@
       },
       {
         "name": "Spring boot",
-        "percent": "95"
+        "percent": "100"
       },
       {
-        "name": "",
-        "percent": ""
+        "name": "Mysql - PostgresSQL - SQLITE - H2 DB",
+        "percent": "100"
       },
       {
         "name": "",
