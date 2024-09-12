@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,8 +39,10 @@ public class PortfolioSpringBootApplication {
 
     @RequestMapping("/")
     public String root(HttpServletRequest request,
+                       @RequestParam(required = false) String lang,
                        Model input) throws IOException {
-        String lang = request.getLocale().getLanguage();
+
+        lang = lang == null || lang.isBlank() ? request.getLocale().getLanguage() : lang;
         // reading data json files for each language then cache them
         if (data == null)
             synchronized (new Object()) {

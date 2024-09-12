@@ -1,16 +1,16 @@
 {
   "metadata": {
     "title": "Abdelouadoud Rasmi",
-    "description": "Abdelouadoud Rasmi is a talented senior fullstack / backend Java developer, using Spring boot, from Algeria, i have worked on so many projects for big companies",
+    "description": "Avec plus de 8 années d'expérience dans le domaine du développement Java Backend et Fullstack, notamment avec Spring Boot, Kafka et Angular, j'ai également acquis des compétences solides en DevOps, telles que Jenkins, ci et Docker, ainsi que d’autres compétences sur les BDD notamment: PostgreSQL, MYSQL, MongoDb, Cassandra.",
     "og:img": "/images/rasmi.jpeg",
     "favicon": "/images/rasmi.jpeg"
   },
   "personal": {
     "fullname": "Abdelouadoud Rasmi",
     "avatar": "/images/rasmi.jpeg",
-    "job": "Java developer",
-    "birthday": "April 06, 1998",
-    "location": "Paris, France",
+    "job": "Développeur Java Fullstack & Devops\n",
+    "birthday": "xx-xx-xxxx",
+    "location": "Lyon, France",
     "phone": "+ (33) 7 510 273 79",
     "email": "abdelouadoudrasmi@gmail.com",
     "facebook": "",
@@ -20,7 +20,7 @@
     "mapsLink": ""
   },
   "about": {
-    "description": "",
+    "description": "Avec plus de 8 années d'expérience dans le domaine du développement Java Backend et Fullstack, notamment avec Spring Boot, Kafka et Angular, j'ai également acquis des compétences solides en DevOps, telles que Jenkins, ci et Docker, ainsi que d’autres compétences sur les BDD notamment: PostgreSQL, MYSQL, MongoDb, Cassandra.",
     "activities": [
       {
         "image": "images/icon-dev.svg",
@@ -82,21 +82,16 @@
   "resume": {
     "education": [
       {
-        "degree": "Master & Engineer of computer science",
+        "degree": "Ingénieur & Master en informatique",
         "period": "2015 — 2020",
-        "description": "2 degrees of computer science, Master and Engineer, in information system and web development, from the Higher school of computer science in Algeria (ESI)"
-      },
-      {
-        "degree": "High school degree - Baccalaureate exam",
-        "period": "2012 — 2015",
-        "description": "High school degree, Baccalaureate exam with very good mark, one of the best students in my city"
+        "description": "Deux diplômes en informatique, Master et Ingénieur, en systèmes d'information et développement web, de l'École Supérieure d'Informatique en Algérie (ESI)."
       }
     ],
     "experience": [
       {
-        "name": "Fullstack Java developer - Alten",
-        "period": "2023 (6 months)",
-        "description": "Permanent position as a Java developer, worked on 3 different projects <br>-tes<br>-odfd"
+        "name": "Expert Développeur Java Backend & Devops",
+        "period": "FREELANCE - CNAM (Caisse d’assurance Maladie)",
+        "description": "<b>Lyon - France Janvier 2024  -> en cours… (8 mois)</b><br><b>Technos</b>: Java 17, Spring boot, Hibernate, POSTGRESQL, Liquibase, MongoDb, Cassandra JavaScript, Bootstrap, Jenkins ci/cd, Docker, Git, Gitlab, Openshift, Microservices, Jira, Confluence…<br><ul style='list-style:initial'> Conception et Réalisation et déploiement du projet PCR, une application Fullstack.\n<li>Analyse des besoins et rédaction de la documentation technique et fonctionnelle, Backlog et l’estimation des US.</li>\nDéveloppement du Backend et des Rest Apis avec Java 17 & Spring boot 3…\nCréation et optimisation de bases de données et des requêtes Hibernate, POSTGRESQL et Liquibase\nCréation de tests unitaires avec Junit.\nCréation des pipelines ci / cd et déploiement d’applications avec , Jenkins, Docker, Gitlab ci..\nParticipation au cérémonies Scrum: daily, refinement, rétro, estimation ext…\nCode Review et Qualité de code avec Sonar, Stylecheck ….\nPartage de connaissances avec les membres de l’équipe.</ul>"
       },
       {
         "name": "",
