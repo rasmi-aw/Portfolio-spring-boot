@@ -1,0 +1,69 @@
+<article class="resume" data-page="resume">
+
+    <header>
+        <h2 class="h2 article-title">Resume</h2>
+    </header>
+
+    <section class="timeline">
+
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+        </div>
+
+        <ol class="timeline-list">
+            <bs:for item="edu" in="data.resume.education"></bs:for>
+            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">{{ edu.degree }}</h4>
+                <span>{{ edu.period }}</span>
+                <p class="timeline-text">
+                    {{ edu.description }}
+                </p>
+            </li>
+        </ol>
+
+    </section>
+
+    <section class="timeline">
+
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+        </div>
+
+        <ol class="timeline-list">
+            <bs:for item="exp" in="data.resume.experience">
+                <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">{{ exp.name }}</h4>
+                    <span>{{ exp.period }}</span>
+                    <p class="timeline-text">
+                        {{ exp.description }}
+                    </p>
+                </li>
+            </bs:for>
+        </ol>
+    </section>
+    <section class="skill">
+        <h3 class="h3 skills-title">My skills</h3>
+        <ul class="skills-list content-card">
+            <bs:for item="skill" in="data.resume.skills">
+                <li class="skills-item">
+                    <div class="title-wrapper">
+                        <h5 class="h5">{{ skill.name }}</h5>
+                        <data bs:value="skill.percent">{{ skill.percent + '%' }}</data>
+                    </div>
+
+                    <div class="skill-progress-bg">
+                        <div class="skill-progress-fill" bs:style="'width:'+ skill.percent + '%'"></div>
+                    </div>
+                </li>
+            </bs:for>
+        </ul>
+    </section>
+</article>

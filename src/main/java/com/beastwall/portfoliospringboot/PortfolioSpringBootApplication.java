@@ -23,6 +23,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 @SpringBootApplication
 
@@ -40,7 +41,7 @@ public class PortfolioSpringBootApplication {
     @RequestMapping("/")
     public String root(HttpServletRequest request,
                        @RequestParam(required = false) String lang,
-                       Model input) throws IOException {
+                       Map<String, Object> input) throws IOException {
 
         lang = lang == null || lang.isBlank() ? request.getLocale().getLanguage() : lang;
         // reading data json files for each language then cache them
@@ -59,9 +60,9 @@ public class PortfolioSpringBootApplication {
             }
         if (!data.containsKey(lang))
             lang = "en";
-        input.addAttribute("data", data.get(lang));
-        input.addAttribute("lang", lang);
-        input.addAttribute("dir", !lang.equals("ar") ? "ltr" : "rtl");
+        input.put("data", data.get(lang));
+        input.put("lang", lang);
+        input.put("dir", !lang.equals("ar") ? "ltr" : "rtl");
         return "index";
     }
 
