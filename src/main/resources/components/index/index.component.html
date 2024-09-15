@@ -28,92 +28,14 @@
 
 <body>
 
-<!--
-  - #MAIN
--->
-
 <main>
 
-    <!--
-      - #SIDEBAR
-    -->
     <bs:component name="sidebar"></bs:component>
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-        <!--
-          - #NAVBAR
-        -->
-
-        <nav class="navbar">
-
-            <ul class="navbar-list">
-
-                <li class="navbar-item">
-                    <button class="navbar-link  active" data-nav-link>About</button>
-                </li>
-
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Resume</button>
-                </li>
-
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Portfolio</button>
-                </li>
-
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Blog</button>
-                </li>
-
-                <li class="navbar-item">
-                    <button class="navbar-link" data-nav-link>Contact</button>
-                </li>
-
-            </ul>
-
-        </nav>
-
-
-        <!--
-          - #ABOUT
-        -->
-        <bs:component name="about"></bs:component>
-
-        <!--
-          - #RESUME
-        -->
-        <bs:component name="resume"></bs:component>
-        <!--
-          - #PORTFOLIO
-        -->
-        <bs:component name="portfolio"></bs:component>
-        <!--
-          - #BLOG
-        -->
-        <bs:component name="blog"></bs:component>
-        <!--
-          - #CONTACT
-        -->
-        <bs:component name="contact"></bs:component>
-
-    </div>
+    <bs:component name="main"></bs:component>
 
 </main>
 
-
-<!--
-  - custom js link
--->
 <script src="js/script.js"></script>
-
-<!--
-  - ionicon link
--->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
