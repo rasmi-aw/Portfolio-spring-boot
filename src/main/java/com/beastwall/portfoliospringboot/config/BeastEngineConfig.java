@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.core.Ordered;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
@@ -17,20 +18,13 @@ import java.util.Map;
 @Configuration
 public class BeastEngineConfig implements WebMvcConfigurer {
 
-    // Register your custom template engine as a Spring Bean
     @Bean
-    public BeastHtmlEngine beastHtmlEngine() {
-        return new BeastHtmlEngine();
+    public ViewResolver customViewResolver() {
+        return new BeastHtmlEngineResolver();
     }
 
-    @Bean
-    public ViewResolver customViewResolver(BeastHtmlEngine beastHtmlEngine) {
-        return new BeastHtmlEngineResolver(beastHtmlEngine);
-    }
 
-    @AllArgsConstructor
     class BeastHtmlEngineResolver implements ViewResolver, Ordered {
-        private BeastHtmlEngine engine;
 
         @Override
         public int getOrder() {
@@ -47,6 +41,9 @@ public class BeastEngineConfig implements WebMvcConfigurer {
 
                 @Override
                 public void render(Map<String, ?> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+                    long time = System.currentTimeMillis();
+                    BeastHtmlEngine engine = new BeastHtmlEngine();
+                    System.out.println(System.currentTimeMillis() - time);
                     String content = engine.processComponent(viewName, (Map<String, Object>) model);
                     response.getWriter().write(content);
                 }
