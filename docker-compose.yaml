@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+
+  wadoud.beastwall.com:
+    image: wadoud.beastwall.com
+    container_name: wadoud.beastwall.com
+    build: .
+    ports:
+      - "127.0.0.1:2024:2024"
+    restart: always
+    environment:
+      - "JAVA_OPTS=-XX:MaxRAMPercentage=80.0" #max ram can be used in host machine
