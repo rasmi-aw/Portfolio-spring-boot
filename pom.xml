@@ -84,12 +84,12 @@
 
     </dependencies>
 
-    <distributionManagement>
+    <repositories>
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/rasmi-aw/beast-engine</url>
         </repository>
-    </distributionManagement>
+    </repositories>
 
     <build>
         <finalName>portfolio</finalName>
