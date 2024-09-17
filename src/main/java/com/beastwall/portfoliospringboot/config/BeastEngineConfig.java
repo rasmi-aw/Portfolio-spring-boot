@@ -17,15 +17,15 @@ import java.util.Map;
 @Configuration
 public class BeastEngineConfig implements WebMvcConfigurer {
 
-    // Register your custom template engine as a Spring Bean
     @Bean
     public BeastHtmlEngine beastHtmlEngine() {
         return new BeastHtmlEngine();
     }
 
+
     @Bean
-    public ViewResolver customViewResolver(BeastHtmlEngine beastHtmlEngine) {
-        return new BeastHtmlEngineResolver(beastHtmlEngine);
+    public ViewResolver customViewResolver() {
+        return new BeastHtmlEngineResolver(beastHtmlEngine());
     }
 
     @AllArgsConstructor
