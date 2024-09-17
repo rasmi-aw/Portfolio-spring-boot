@@ -83,15 +83,14 @@
         </dependency>
 
     </dependencies>
-    <repositories>
+
+    <distributionManagement>
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/rasmi-aw/beast-engine</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
         </repository>
-    </repositories>
+    </distributionManagement>
+
     <build>
         <finalName>portfolio</finalName>
         <plugins>
