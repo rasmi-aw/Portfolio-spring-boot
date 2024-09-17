@@ -47,8 +47,6 @@ public class BeastEngineConfig implements WebMvcConfigurer {
 
                 @Override
                 public void render(Map<String, ?> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
-                    long time = System.currentTimeMillis();
-                    System.out.println(System.currentTimeMillis() - time);
                     String content = engine.processComponent(viewName, (Map<String, Object>) model);
                     response.getWriter().write(content);
                 }

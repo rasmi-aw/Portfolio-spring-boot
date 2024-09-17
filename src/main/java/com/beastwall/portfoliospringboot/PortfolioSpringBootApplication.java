@@ -1,6 +1,7 @@
 package com.beastwall.portfoliospringboot;
 
 import com.beastwall.portfoliospringboot.model.Data;
+import com.beastwall.portfoliospringboot.model.Personal;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,10 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootApplication
 
@@ -60,6 +58,8 @@ public class PortfolioSpringBootApplication {
             }
         if (!data.containsKey(lang))
             lang = "en";
+        //
+
         input.put("data", data.get(lang));
         input.put("lang", lang);
         input.put("dir", !lang.equals("ar") ? "ltr" : "rtl");
@@ -81,6 +81,12 @@ public class PortfolioSpringBootApplication {
                                 Exception e) throws ServletException, IOException {
         request.getRequestDispatcher("/").forward(request, response);
         e.printStackTrace();
+    }
+
+    public static String random(String prefix, int numberLength) {
+        int randomNumber = new Random().nextInt((int) Math.pow(10, numberLength));
+        String numberString = String.format("%0" + numberLength + "d", randomNumber);
+        return prefix + numberString;
     }
 
 }
