@@ -1,11 +1,13 @@
 package com.beastwall.portfoliospringboot;
 
+import com.beastwall.beastengine.Context;
 import com.beastwall.portfoliospringboot.model.Data;
 import com.beastwall.portfoliospringboot.model.Personal;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.io.ClassPathResource;
@@ -39,7 +41,7 @@ public class PortfolioSpringBootApplication {
     @RequestMapping("/")
     public String root(HttpServletRequest request,
                        @RequestParam(required = false) String lang,
-                       Map<String, Object> input) throws IOException {
+                       Model model) throws IOException {
 
         lang = lang == null || lang.isBlank() ? request.getLocale().getLanguage() : lang;
         // reading data json files for each language then cache them
@@ -59,10 +61,9 @@ public class PortfolioSpringBootApplication {
         if (!data.containsKey(lang))
             lang = "en";
         //
-
-        input.put("data", data.get(lang));
-        input.put("lang", lang);
-        input.put("dir", !lang.equals("ar") ? "ltr" : "rtl");
+        model.addAttribute("data", data.get(lang));
+        model.addAttribute("lang", lang);
+        model.addAttribute("dir", !lang.equals("ar") ? "ltr" : "rtl");
         return "index";
     }
 

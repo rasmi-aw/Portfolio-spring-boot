@@ -18,4 +18,14 @@ public class Metadata {
     @JsonProperty("og:img")
     private String image;
     private String favicon;
+
+    @Override
+    public String toString() {
+        return "Metadata{" +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", favicon='" + favicon + '\'' +
+                '}';
+    }
 }
