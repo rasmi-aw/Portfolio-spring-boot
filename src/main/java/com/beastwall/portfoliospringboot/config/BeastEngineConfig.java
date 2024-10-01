@@ -5,6 +5,7 @@ import com.beastwall.beastengine.Context;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -22,6 +23,15 @@ public class BeastEngineConfig implements WebMvcConfigurer {
 
 
     @Bean
+    @RequestScope
+    public Context context() {
+        return new Context();
+    }
+
+    @Autowired
+    private Context context;
+
+    @Bean
     public BeastHtmlEngine beastHtmlEngine() {
         return new BeastHtmlEngine("components");
     }
@@ -29,12 +39,14 @@ public class BeastEngineConfig implements WebMvcConfigurer {
 
     @Bean
     public ViewResolver customViewResolver() {
-        return new BeastHtmlEngineResolver(beastHtmlEngine());
+        return new BeastHtmlEngineResolver(beastHtmlEngine(), context);
     }
 
     @AllArgsConstructor
     static class BeastHtmlEngineResolver implements ViewResolver, Ordered {
         private BeastHtmlEngine engine;
+
+        private Context context;
 
         @Override
         public int getOrder() {
@@ -56,8 +68,7 @@ public class BeastEngineConfig implements WebMvcConfigurer {
                     if (lang == null) {
                         lang = request.getLocale().getLanguage();
                     }
-                    Context context = new Context(new Locale(lang));
-                    context.putAll(model);
+                    context.setLocale(new Locale(lang));
                     String content = engine.processComponent(viewName, context);
                     //System.out.println(System.currentTimeMillis() - time);
                     response.getWriter().write(content);

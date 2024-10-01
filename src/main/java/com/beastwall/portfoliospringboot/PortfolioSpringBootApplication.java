@@ -33,6 +33,9 @@ public class PortfolioSpringBootApplication {
     private HashMap<String, Data> data;
 
 
+    @Autowired
+    private Context context;
+
     public static void main(String[] args) {
         SpringApplication.run(PortfolioSpringBootApplication.class, args);
     }
@@ -40,8 +43,7 @@ public class PortfolioSpringBootApplication {
 
     @RequestMapping("/")
     public String root(HttpServletRequest request,
-                       @RequestParam(required = false) String lang,
-                       Model model) throws IOException {
+                       @RequestParam(required = false) String lang) throws IOException {
 
         lang = lang == null || lang.isBlank() ? request.getLocale().getLanguage() : lang;
         // reading data json files for each language then cache them
@@ -61,9 +63,10 @@ public class PortfolioSpringBootApplication {
         if (!data.containsKey(lang))
             lang = "en";
         //
-        model.addAttribute("data", data.get(lang));
-        model.addAttribute("lang", lang);
-        model.addAttribute("dir", !lang.equals("ar") ? "ltr" : "rtl");
+        context.put("yes", "yes");
+        context.put("data", data.get(lang));
+        context.put("lang", lang);
+        context.put("dir", !lang.equals("ar") ? "ltr" : "rtl");
         return "index";
     }
 
