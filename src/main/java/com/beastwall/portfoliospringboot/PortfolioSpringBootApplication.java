@@ -2,7 +2,6 @@ package com.beastwall.portfoliospringboot;
 
 import com.beastwall.beastengine.Context;
 import com.beastwall.portfoliospringboot.model.Data;
-import com.beastwall.portfoliospringboot.model.Personal;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -15,12 +14,10 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -67,7 +64,7 @@ public class PortfolioSpringBootApplication {
         context.put("data", data.get(lang));
         context.put("lang", lang);
         context.put("dir", !lang.equals("ar") ? "ltr" : "rtl");
-        return "index";
+        return "app";
     }
 
     /**
