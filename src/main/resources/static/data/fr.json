@@ -1,12 +1,12 @@
 {
   "metadata": {
     "title": "Abdelouadoud Rasmi",
-    "description": "Avec plus de 8 années d'expérience dans le domaine du développement Java Backend et Fullstack, notamment avec Spring Boot, Kafka et Angular, j'ai également acquis des compétences solides en DevOps, telles que Jenkins, ci et Docker, ainsi que d’autres compétences sur les BDD notamment: PostgreSQL, MYSQL, MongoDb, Cassandra.",
+    "description": "Avec plus de 8 années d'expérience dans le domaine du développement Java Backend et Fullstack, notamment avec Spring Boot et Kafka et Angular, j'ai également acquis des compétences solides en DevOps, telles que Jenkins et Docker. Mon amour pour l'informatique se reflète dans ma passion pour mon métier, ma rigueur et mon autonomie. Je m'efforce constamment de rester à la pointe des nouvelles technologies pour offrir le meilleur dans mon domaine.",
     "og:img": "/images/rasmi.jpeg",
     "favicon": "/images/rasmi.jpeg"
   },
   "personal": {
-    "fullname": "Abdelouadoud Rasmi",
+    "fullname": "Abdelwadoud Rasmi",
     "avatar": "/images/rasmi.jpeg",
     "job": "Développeur Java Fullstack & Devops\n",
     "birthday": "xx-xx-xxxx",
