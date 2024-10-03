@@ -79,16 +79,17 @@
         <dependency>
             <groupId>com.beastwall</groupId>
             <artifactId>beast</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.5</version>
         </dependency>
 
 
     </dependencies>
 
     <repositories>
+
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/rasmi-aw/*</url>
+            <url>https://maven.pkg.github.com/Beastwall/beast</url>
         </repository>
     </repositories>
 

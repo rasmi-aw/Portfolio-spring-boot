@@ -1,5 +1,6 @@
 package com.beastwall.portfoliospringboot.config;
 
+import com.beastwall.beastengine.BeastEngine;
 import com.beastwall.beastengine.BeastHtmlEngine;
 import com.beastwall.beastengine.Context;
 import jakarta.servlet.http.HttpServletRequest;
@@ -63,10 +64,13 @@ public class BeastEngineConfig implements WebMvcConfigurer {
                 @Override
                 public void render(Map<String, ?> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
                     //long time = System.currentTimeMillis();
+                    System.out.println(request.getRequestURI());
+                    //
                     String lang = request.getParameter("lang");
                     if (lang == null) {
                         lang = request.getLocale().getLanguage();
                     }
+                    context.put("bs:path", request.getRequestURI());
                     context.setLocale(new Locale(lang));
                     String content = engine.processComponent(viewName, context);
                     //System.out.println(System.currentTimeMillis() - time);

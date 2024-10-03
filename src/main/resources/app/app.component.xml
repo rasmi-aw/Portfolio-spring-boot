@@ -1,0 +1,4 @@
+<provider scope="local">
+    <res name="categories" local-bean="categories" path="api/categories/all" handler="GetData"/>
+    <res name="contact" bean="contact" path="api/contact"/>
+</provider>
