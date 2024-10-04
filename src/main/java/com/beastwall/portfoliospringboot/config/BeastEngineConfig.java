@@ -64,7 +64,6 @@ public class BeastEngineConfig implements WebMvcConfigurer {
                 @Override
                 public void render(Map<String, ?> model, HttpServletRequest request, HttpServletResponse response) throws Exception {
                     //long time = System.currentTimeMillis();
-                    System.out.println(request.getRequestURI());
                     //
                     String lang = request.getParameter("lang");
                     if (lang == null) {

@@ -38,7 +38,7 @@ public class PortfolioSpringBootApplication {
     }
 
 
-    @RequestMapping("/{route}")
+    @RequestMapping("/")
     public String root(HttpServletRequest request,
                        @RequestParam(required = false) String lang) throws IOException {
 
