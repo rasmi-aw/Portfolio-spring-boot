@@ -78,8 +78,8 @@
 
         <dependency>
             <groupId>com.beastwall</groupId>
-            <artifactId>beast</artifactId>
-            <version>0.0.5</version>
+            <artifactId>beast-engine</artifactId>
+            <version>0.0.51</version>
         </dependency>
 
 
