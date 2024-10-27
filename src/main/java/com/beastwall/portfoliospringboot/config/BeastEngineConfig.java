@@ -1,6 +1,5 @@
 package com.beastwall.portfoliospringboot.config;
 
-import com.beastwall.beastengine.BeastEngine;
 import com.beastwall.beastengine.BeastHtmlEngine;
 import com.beastwall.beastengine.Context;
 import jakarta.servlet.http.HttpServletRequest;
